@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./app/App.tsx";
+import "../src/styles/main.scss";
 
-ReactDOM.createRoot(document.getElementById("root") ?? new Element()).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const element = document.getElementById("root") ?? new Element();
+
+if (element) {
+  ReactDOM.createRoot(element).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  );
+}
